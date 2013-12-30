@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
   s.description = 'Incremental Git repository deployment'
   
   s.add_dependency 'grit', '>= 2.4.1'
+  s.add_dependency 'subwrap', '>= 0.5.1'
   
   s.add_development_dependency 'mocha', '>= 0.9.12'
   s.add_development_dependency 'net-sftp', '>= 2.0.5'

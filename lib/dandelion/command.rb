@@ -1,7 +1,7 @@
 require 'dandelion'
 require 'dandelion/backend'
 require 'dandelion/deployment'
-require 'dandelion/git'
+require 'dandelion/scm'
 require 'dandelion/version'
 require 'optparse'
 require 'yaml'
@@ -107,7 +107,7 @@ module Dandelion
           backend ||= backend()
           options = { :exclude => @config['exclude'], :revision => revision, :dry => @options[:dry] }
           Deployment::Deployment.create(@repo, backend, options)
-        rescue Git::DiffError
+        rescue SCM::DiffError
           log.fatal('Error: could not generate diff')
           log.fatal('Try merging remote changes before running dandelion again')
           exit 1

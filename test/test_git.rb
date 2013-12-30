@@ -1,4 +1,4 @@
-require 'dandelion/git'
+require 'dandelion/scm/git'
 require 'test/unit'
 
 class TestGit < Test::Unit::TestCase

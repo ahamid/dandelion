@@ -1,4 +1,4 @@
-require 'dandelion/git'
+require 'dandelion/scm'
 
 module Dandelion
   module Deployment

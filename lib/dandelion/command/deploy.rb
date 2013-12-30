@@ -28,7 +28,7 @@ module Dandelion
       def execute
         begin
           @deployment = deployment(@revision)
-        rescue Git::RevisionError
+        rescue SCM::RevisionError
           log.fatal("Invalid revision: #{@revision}")
           exit 1
         end
